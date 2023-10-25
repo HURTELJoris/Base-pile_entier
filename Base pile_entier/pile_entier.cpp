@@ -1,15 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "pile_entier.h"  // Inclure le fichier header de votre classe pile_entier
-#include <iostream>
-#include <stdio.h>
-#include <tchar.h>
-#include <string.h>
-#include <time.h>
-#include <stdlib.h>
-#include <math.h>
-#include <iostream>
-
-// 1. Définissez les différentes méthodes
+#include "pile_entier.h"
 
 pile_entier::pile_entier(int maxTaille)
 {

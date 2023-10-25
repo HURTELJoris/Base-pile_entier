@@ -1,40 +1,34 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "pile_entier.h" // Inclure le fichier header de votre classe pile_entier
-#include <stdio.h>
-#include <tchar.h>
-#include <string.h>
-#include <time.h>
-#include <stdlib.h>
-#include <math.h>
-#include <iostream>
 #include "pile_entier.h"
 
 int main(int argc, char* argv[])
 {
-    // 2. Vous réaliserez un test unitaire qui permettra de vérifier le fonctionnement de la classe.
-
     // Crée une instance de la classe pile_entier avec une taille maximale de 10 éléments.
-    pile_entier maPile(10);
+    pile_entier maPile1(10);
+    std::cout << "Tests de la classe pile_entier : " << std::endl << std::endl;
+
+    std::cout << "La pile est elle pleine : " << maPile1.pleine() << std::endl;
+    std::cout << "La pile est elle vide : " << maPile1.vide() << std::endl << std::endl;
 
     for (int i = 1; i <= 10; i++)
     {
-        maPile.empile(i * 2); // Empile les nombres pairs de 2 à 20
-        maPile.affiche(); // Affiche le contenu de la pile
+        std::cout << "Empile : " << i * 2 << std::endl;
+        maPile1.empile(i * 2); // Empile les nombres pairs de 2 à 20
+        maPile1.affiche(); // Affiche le contenu de la pile
     }
 
-    std::cout << "La pile est pleine : " << maPile.pleine() << std::endl;
-    std::cout << "La pile est vide : " << maPile.vide() << std::endl;
+    std::cout << "\nLa pile est pleine : " << maPile1.pleine() << std::endl;
+    std::cout << "La pile est vide : " << maPile1.vide() << std::endl << std::endl;
 
-    maPile.affiche(); // Affiche le contenu de la pile
+    maPile1.affiche(); // Affiche le contenu de la pile
 
-    while (!maPile.vide())
+    while (!maPile1.vide())
     {
-        std::cout << "Depile : " << maPile.depile() << std::endl;
-        maPile.affiche(); // Affiche le contenu de la pile
+        std::cout << "Depile : " << maPile1.depile() << std::endl;
+        maPile1.affiche(); // Affiche le contenu de la pile
     }
 
-    std::cout << "La pile est pleine : " << maPile.pleine() << std::endl;
-    std::cout << "La pile est vide : " << maPile.vide() << std::endl;
+    std::cout << "\nLa pile est elle pleine : " << maPile1.pleine() << std::endl;
+    std::cout << "La pile est elle vide : " << maPile1.vide() << std::endl << std::endl;
 
     return 0;
 }
