@@ -1,7 +1,6 @@
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "pile_entier.h"
 #include <stdio.h>
 #include <tchar.h>
 #include <string.h>
@@ -9,6 +8,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iostream>
+using namespace std;
 
 class pile_entier
 {
